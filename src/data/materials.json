@@ -1,0 +1,1030 @@
+{
+  "propertyDefinitions": [
+    {
+      "key": "tensileStrength",
+      "label": "Tensile Strength",
+      "shortLabel": "Tensile Strength",
+      "unit": "MPa",
+      "description": "Maximum uniaxial tensile stress a film or specimen can withstand before breaking or yielding under controlled strain.",
+      "chartable": true,
+      "comparabilityNote": "Depends strongly on film thickness, plasticizer content, crystallinity, conditioning relative humidity, and strain rate (e.g., ASTM D882 vs. ISO 527)."
+    },
+    {
+      "key": "wvtr",
+      "label": "Water Vapour Transmission Rate (WVTR)",
+      "shortLabel": "WVTR",
+      "unit": "g/m²/day",
+      "description": "Steady-state rate of water vapour permeation through a unit area of film over 24 hours under a specified temperature and RH gradient.",
+      "chartable": true,
+      "comparabilityNote": "Cannot be compared directly across different thickness values, temperature settings (23°C vs. 38°C), or RH gradients (e.g., 50% RH vs. 90% RH under ASTM E96 / ASTM F1249)."
+    },
+    {
+      "key": "contactAngle",
+      "label": "Water Contact Angle",
+      "shortLabel": "Contact Angle",
+      "unit": "degrees (°)",
+      "description": "Static sessile-drop angle formed by distilled water on the polymer surface; indicates relative hydrophilicity (< 90°) or hydrophobicity (≥ 90°).",
+      "chartable": true,
+      "comparabilityNote": "Sensitive to surface roughness, plasticizer migration, casting solvent, and measurement equilibration time."
+    },
+    {
+      "key": "biodegradability",
+      "label": "Biodegradability",
+      "shortLabel": "Biodegradability",
+      "unit": "Defined test result",
+      "description": "Microbial assimilation and mineralization into CO2, H2O, and biomass under defined composting, soil, or marine conditions.",
+      "chartable": false,
+      "comparabilityNote": "Industrial composting (58°C, ISO 14855 / ASTM D6400) differs fundamentally from ambient soil or marine degradation (Emadian et al., 2017)."
+    },
+    {
+      "key": "transparency",
+      "label": "Optical Transparency",
+      "shortLabel": "Transparency",
+      "unit": "% transmittance / haze",
+      "description": "Fraction of visible light transmitted through the film (often measured at 550–600 nm or broadband per ASTM D1003), determining product visibility.",
+      "chartable": true,
+      "comparabilityNote": "Strongly influenced by polymer crystallinity, film thickness, drying kinetics, and presence of fillers or blends."
+    },
+    {
+      "key": "leachingMigration",
+      "label": "Leaching / Migration",
+      "shortLabel": "Leaching / Migration",
+      "unit": "Test-specific",
+      "description": "Mass transfer of monomers, oligomers, plasticizers, or cross-linkers from packaging into food simulants under defined time-temperature contact.",
+      "chartable": false,
+      "comparabilityNote": "Evaluated against food-simulant protocols (aqueous, acidic, or fatty simulants such as EU 10/2011 or FDA 21 CFR); values depend on simulant and contact time."
+    },
+    {
+      "key": "humidityResponse",
+      "label": "Humidity Response",
+      "shortLabel": "Humidity Response",
+      "unit": "% RH & property shift",
+      "description": "Sensitivity of mechanical stiffness, tensile strength, dimensional stability, or barrier rates to rising ambient relative humidity.",
+      "chartable": false,
+      "comparabilityNote": "Polysaccharide films (starch, cellulose, chitosan, alginate) exhibit moisture plasticization at high RH, whereas aliphatic polyesters (PLA, PHA) are comparatively less moisture-sensitive."
+    },
+    {
+      "key": "loadBearingCapacity",
+      "label": "Load-Bearing Capacity",
+      "shortLabel": "Load-Bearing",
+      "unit": "N or kg (setup-defined)",
+      "description": "Maximum vertical, puncture, or burst load supported by a defined film specimen, pouch seal, or thermoformed tray before failure.",
+      "chartable": false,
+      "comparabilityNote": "Highly dependent on container geometry, wall thickness, and fixture design; standardized data for lab-cast thin films are often unavailable."
+    }
+  ],
+  "materials": [
+    {
+      "id": "pla",
+      "name": "PLA (Polylactic Acid)",
+      "shortName": "PLA",
+      "family": "Aliphatic Polyester",
+      "classification": "Bio-based & Biodegradable",
+      "biobasedOrigin": "Fermented plant sugars (corn starch, sugarcane, cassava)",
+      "biodegradationEnvironment": "Industrial composting (~58°C, high moisture)",
+      "imagePath": "/src/assets/images/mat_pla_pha_1794766180954.jpg",
+      "imageCropClass": "object-center",
+      "shortIntro": "A rigid, optically clear aliphatic polyester synthesized from fermented plant dextrose, widely used in thermoformed trays, cups, and biaxially oriented films.",
+      "introduction": "Polylactic acid (PLA) is a thermoplastic aliphatic polyester derived from renewable carbohydrate feedstocks. It is one of the most commercially established bioplastics for rigid and semi-rigid food packaging due to its high modulus, gloss, optical clarity, and processability on conventional extrusion and thermoforming equipment.",
+      "chemicalStructure": {
+        "repeatingUnit": "[-O-CH(CH3)-CO-]n",
+        "formulaNote": "Polymer of lactic acid (2-hydroxypropanoic acid) existing in L-, D-, or racemic D,L-isomeric configurations; L-content governs crystallinity and thermal behaviour.",
+        "diagramType": "pla"
+      },
+      "sourceAndProduction": "Starch or sucrose from maize, sugarcane, or tapioca is enzymatically hydrolyzed to glucose and fermented by Lactobacillus strains to lactic acid. Ring-opening polymerization (ROP) of cyclic lactide dimer yields high-molecular-weight PLA.",
+      "characteristics": [
+        "High tensile modulus (~2.7–3.5 GPa) and glassy rigidity at room temperature (Tg ≈ 55–65°C).",
+        "High optical clarity and surface gloss comparable to PET or polystyrene in amorphous grades.",
+        "Moderate oxygen barrier, though water vapour permeability is higher than polyolefins (PE/PP).",
+        "Requires elevated temperature (~58°C) and microbial humidity for rapid biodegradation; degrades very slowly in ambient soil or marine water."
+      ],
+      "applications": [
+        "Cold beverage cups and lids",
+        "Rigid thermoformed punnets for fresh berries, tomatoes, and salads",
+        "Bakery clamshells and dry confectionery window films",
+        "Biaxially oriented PLA (BOPLA) snack wrappers"
+      ],
+      "advantages": [
+        "Commercially scalable with established resin grades (e.g., extrusion, injection, film).",
+        "High transparency and printability for retail food presentation.",
+        "Lower greenhouse gas footprint in cradle-to-resin assessments compared with several petrochemical polymers."
+      ],
+      "limitations": [
+        "Low heat deflection temperature (unmodified amorphous PLA softens near 55–60°C), limiting hot-fill or microwave use.",
+        "Brittle failure behaviour with low elongation at break (< 10%) unless toughened or copolymerized.",
+        "Does not biodegrade rapidly in home compost bins, landfills, or marine environments."
+      ],
+      "references": [
+        "Marano, S., Laudadio, E., Minnelli, C., & Stipa, P. (2022). Tailoring the Barrier Properties of PLA: A State-of-the-Art Review for Food Packaging Applications. Polymers, 14(8), 1626.",
+        "Shi, X., Cui, L., Xu, C., & Wu, S. (2025). Next-Generation Bioplastics for Food Packaging: Sustainable Materials and Applications. Materials, 18(12), 2919.",
+        "Rosenow, P., Fernández-Ayuso, C., López-García, P., & Minguez-Enkovaara, L. F. (2025). Design, New Materials, and Production Challenges of Bioplastics-Based Food Packaging. Materials, 18(3), 673.",
+        "Cruz, R. M. S., et al. (2022). Bioplastics for Food Packaging: Environmental Impact, Trends and Regulatory Aspects. Foods, 11(19), 3087.",
+        "Siracusa, V., Rocculi, P., Romani, S., & Dalla Rosa, M. (2008). Biodegradable Polymers for Food Packaging: A Review. Trends in Food Science & Technology, 19, 634–643.",
+        "Peelman, N., Ragaert, P., De Meulenaer, B., Adons, D., Peeters, R., Cardon, L., et al. (2013). Application of Bioplastics for Food Packaging. Trends in Food Science & Technology, 32(2), 128–141.",
+        "Emadian, S. M., Onay, T. T., & Demirel, B. (2017). Biodegradation of Bioplastics in Natural Environments. Waste Management, 59, 526–536."
+      ],
+      "properties": {
+        "tensileStrength": {
+          "value": "45–70",
+          "numericValue": 57.5,
+          "numericRange": [45, 70],
+          "unit": "MPa",
+          "testMethod": "ASTM D882 / ISO 527 (literature film & molded range)",
+          "sampleThickness": "25–100 µm (film) / 3.2 mm (molded)",
+          "temperature": "23 °C",
+          "relativeHumidity": "50 % RH",
+          "formulation": "Unmodified semicrystalline/amorphous PLLA commercial extrusion grades",
+          "reference": "Siracusa et al. (2008); Peelman et al. (2013)",
+          "sourceType": "Literature-reported",
+          "notes": "Orientation (BOPLA) increases tensile strength up to ~100 MPa along the draw direction; plasticization lowers tensile strength."
+        },
+        "wvtr": {
+          "value": "172 (25 µm normalized range: 150–250)",
+          "numericValue": 172,
+          "numericRange": [150, 250],
+          "unit": "g/m²/day",
+          "testMethod": "ASTM E96 / ASTM F1249 (standardized 25 µm film basis)",
+          "sampleThickness": "25 µm",
+          "temperature": "37.8–38 °C",
+          "relativeHumidity": "90 % RH gradient",
+          "formulation": "Unmodified commercial PLA film",
+          "reference": "Peelman et al. (2013); Marano et al. (2022)",
+          "sourceType": "Literature-reported",
+          "notes": "Higher WVTR than LDPE (~10–20 g/m²/day at 25 µm) or PET; barrier coatings (SiOx, AlOx) or multilayer structures are often studied for dry foods."
+        },
+        "contactAngle": {
+          "value": "68–78",
+          "numericValue": 73,
+          "numericRange": [68, 78],
+          "unit": "degrees (°)",
+          "testMethod": "Static sessile drop (deionized water)",
+          "sampleThickness": "30–100 µm film",
+          "temperature": "20–25 °C",
+          "relativeHumidity": "Ambient (~50% RH)",
+          "formulation": "Neat extruded or solvent-cast PLA",
+          "reference": "Literature surface characterization studies (Siracusa et al., 2008 context)",
+          "sourceType": "Literature-reported",
+          "notes": "Moderately hydrophilic/wettable compared to polyolefins (~95–105°), yet far more water-resistant than native polysaccharides."
+        },
+        "biodegradability": {
+          "value": "60–90% mineralization within 60–180 days (industrial compost)",
+          "numericValue": null,
+          "unit": "% CO2 mineralization",
+          "testMethod": "ISO 14855 / ASTM D5338 controlled composting",
+          "sampleThickness": "Film / powdered granules",
+          "temperature": "58 ± 2 °C",
+          "relativeHumidity": "50–60 % compost moisture",
+          "formulation": "Neat PLA resin",
+          "reference": "Emadian, Onay & Demirel (2017)",
+          "sourceType": "Literature-reported",
+          "notes": "In ambient soil (20–30°C) or marine water, degradation is substantially slower (< 15% over 100+ days) because Tg (~58°C) is not exceeded."
+        },
+        "transparency": {
+          "value": "> 90% light transmittance (amorphous / BOPLA); haze < 3%",
+          "numericValue": 92,
+          "numericRange": [90, 95],
+          "unit": "% transmittance",
+          "testMethod": "ASTM D1003 / UV-Vis spectroscopy (550–600 nm)",
+          "sampleThickness": "25–50 µm",
+          "temperature": "23 °C",
+          "relativeHumidity": "50 % RH",
+          "formulation": "Amorphous or biaxially oriented PLA film",
+          "reference": "Peelman et al. (2013)",
+          "sourceType": "Literature-reported",
+          "notes": "Annealed high-crystallinity heat-resistant PLA grades turn opaque white due to spherulitic light scattering."
+        },
+        "leachingMigration": {
+          "value": "Overall migration typically < 10 mg/dm² limit in tested aqueous/acidic simulants",
+          "numericValue": null,
+          "unit": "mg/dm² (food simulant)",
+          "testMethod": "EU Regulation No 10/2011 food-simulant immersion (e.g., 3% acetic acid, 10% ethanol)",
+          "sampleThickness": "50–250 µm film/sheet",
+          "temperature": "40 °C (10 days)",
+          "relativeHumidity": "Immersion test",
+          "formulation": "Food-contact commercial PLA grades",
+          "reference": "Peelman et al. (2013)",
+          "sourceType": "Literature-reported",
+          "notes": "Specific migration of lactic acid/lactide monomers increases in 50–95% ethanol or at temperatures above Tg (≥ 60°C); additive-dependent."
+        },
+        "humidityResponse": {
+          "value": "Minimal tensile drop (< 10% variation between 20% and 85% RH at 23°C)",
+          "numericValue": null,
+          "unit": "% RH vs. tensile/barrier shift",
+          "testMethod": "Conditioned tensile & WVTR testing across RH steps",
+          "sampleThickness": "25–50 µm",
+          "temperature": "23 °C",
+          "relativeHumidity": "20 % to 85 % RH",
+          "formulation": "Neat PLA film",
+          "reference": "Siracusa et al. (2008); Peelman et al. (2013)",
+          "sourceType": "Literature-reported",
+          "notes": "Low equilibrium moisture uptake (< 1 wt% at 50% RH) preserves dimensional rigidity better than starch or cellulose films, though hydrolytic cleavage accelerates in warm humid storage."
+        },
+        "loadBearingCapacity": {
+          "value": "Data not available (specimen-geometry dependent)",
+          "numericValue": null,
+          "unit": "N or kg",
+          "testMethod": "No single standardized container load value across studies",
+          "sampleThickness": "Varies by thermoformed wall thickness (200–600 µm)",
+          "temperature": "23 °C",
+          "relativeHumidity": "50 % RH",
+          "formulation": "Thermoformed PLA trays / cups",
+          "reference": "Not standardized across general literature",
+          "sourceType": "Not available",
+          "notes": "Top-load crush resistance depends on tray rib geometry and wall gauge; specific commercial container specifications must be tested per ASTM D2659 / ASTM D642."
+        }
+      }
+    },
+    {
+      "id": "pha",
+      "name": "PHA / PHB (Polyhydroxyalkanoates)",
+      "shortName": "PHA / PHB",
+      "family": "Microbial Polyester",
+      "classification": "Bio-based & Biodegradable",
+      "biobasedOrigin": "Bacterial intracellular fermentation of plant oils, sugars, or VFAs",
+      "biodegradationEnvironment": "Industrial compost, soil, freshwater, and marine environments",
+      "imagePath": "/src/assets/images/mat_pla_pha_1794766180954.jpg",
+      "imageCropClass": "object-right",
+      "shortIntro": "Intracellular microbial polyesters synthesized by bacteria as carbon-energy reserves, offering broader natural biodegradation including soil and marine media.",
+      "introduction": "Polyhydroxyalkanoates (PHAs)—including homopolymer poly(3-hydroxybutyrate) (PHB) and copolymer poly(3-hydroxybutyrate-co-3-hydroxyvalerate) (PHBV)—are linear polyesters produced directly inside microorganisms. Unlike PLA, PHAs are inherently biodegradable across a wide range of aerobic and anaerobic natural ecosystems.",
+      "chemicalStructure": {
+        "repeatingUnit": "[-O-CH(R)-CH2-CO-]n (R = CH3 for PHB)",
+        "formulaNote": "Microbial aliphatic hydroxyalkanoate family where side-chain alkyl group R varies (methyl in PHB, ethyl in PHV), tuning crystallinity and flexibility.",
+        "diagramType": "pha"
+      },
+      "sourceAndProduction": "Bacteria such as Cupriavidus necator or recombinant E. coli accumulate PHA granules (up to 70–80% cell dry weight) under nutrient-limited fermentation of glucose, vegetable oils, or agro-industrial waste streams, followed by solvent or enzymatic cell lysis recovery.",
+      "characteristics": [
+        "PHB homopolymer is highly crystalline and stiff, whereas copolymers (PHBV, PHBHHx) offer improved ductility and lower melting temperatures.",
+        "Superior water vapour barrier compared to unmodified PLA and hydrophilic polysaccharides.",
+        "Biodegrades in ambient soil, home compost, freshwater, and marine water without requiring thermophilic 58°C conditions.",
+        "Narrow thermal processing window near melting point (Tm ≈ 170–180°C for PHB) requires careful stabilization."
+      ],
+      "applications": [
+        "Moisture-sensitive dry food pouches and laminated paperboard coatings",
+        "Injection-molded cutlery, caps, and rigid food containers",
+        "Dairy and fatty-food barrier films (when copolymerized as PHBV/PHBHHx)",
+        "Marine-degradable agricultural and seafood packaging"
+      ],
+      "advantages": [
+        "True multi-environment biodegradability (compost, soil, aquatic) confirmed across microbial ecosystems.",
+        "Better hydrophobic moisture barrier than starch, cellulose, or unmodified PLA.",
+        "High crystallinity and heat resistance (Tm up to ~175°C in PHB) relative to amorphous PLA."
+      ],
+      "limitations": [
+        "Significantly higher production cost than PLA and petrochemical plastics due to fermentation and downstream extraction.",
+        "PHB homopolymer undergoes secondary crystallization during storage, causing progressive brittleness.",
+        "Lower optical transparency than amorphous PLA due to high spherulite crystallinity."
+      ],
+      "references": [
+        "Shi, X., Cui, L., Xu, C., & Wu, S. (2025). Next-Generation Bioplastics for Food Packaging: Sustainable Materials and Applications. Materials, 18(12), 2919.",
+        "Şomoghi, R., Mihai, S., & Oancea, F. (2025). An Overview of Bio-Based Polymers with Potential for Food Packaging Applications. Polymers, 17(17), 2335.",
+        "Rosenow, P., Fernández-Ayuso, C., López-García, P., & Minguez-Enkovaara, L. F. (2025). Design, New Materials, and Production Challenges of Bioplastics-Based Food Packaging. Materials, 18(3), 673.",
+        "Perera, K. Y., Jaiswal, A. K., & Jaiswal, S. (2023). Biopolymer-Based Sustainable Food Packaging Materials: Challenges, Solutions, and Applications. Foods, 12(12), 2422.",
+        "Siracusa, V., Rocculi, P., Romani, S., & Dalla Rosa, M. (2008). Biodegradable Polymers for Food Packaging: A Review. Trends in Food Science & Technology, 19, 634–643.",
+        "Peelman, N., Ragaert, P., De Meulenaer, B., Adons, D., Peeters, R., Cardon, L., et al. (2013). Application of Bioplastics for Food Packaging. Trends in Food Science & Technology, 32(2), 128–141.",
+        "Emadian, S. M., Onay, T. T., & Demirel, B. (2017). Biodegradation of Bioplastics in Natural Environments. Waste Management, 59, 526–536."
+      ],
+      "properties": {
+        "tensileStrength": {
+          "value": "20–40 (PHB up to 40; PHBV 20–32)",
+          "numericValue": 30,
+          "numericRange": [20, 40],
+          "unit": "MPa",
+          "testMethod": "ASTM D882 / ASTM D638",
+          "sampleThickness": "40–100 µm (film) / molded bars",
+          "temperature": "23 °C",
+          "relativeHumidity": "50 % RH",
+          "formulation": "Neat PHB and PHBV (5–12 mol% HV)",
+          "reference": "Siracusa et al. (2008); Peelman et al. (2013)",
+          "sourceType": "Literature-reported",
+          "notes": "Increasing 3-hydroxyvalerate (HV) comonomer lowers tensile strength slightly while substantially improving elongation at break."
+        },
+        "wvtr": {
+          "value": "13–45 (normalized ~25 µm PHB/PHBV range)",
+          "numericValue": 29,
+          "numericRange": [13, 45],
+          "unit": "g/m²/day",
+          "testMethod": "ASTM E96 / ASTM F1249",
+          "sampleThickness": "25–50 µm",
+          "temperature": "38 °C",
+          "relativeHumidity": "90 % RH",
+          "formulation": "Compression-molded or extruded PHB / PHBV film",
+          "reference": "Peelman et al. (2013)",
+          "sourceType": "Literature-reported",
+          "notes": "Among bio-based biodegradable polyesters, PHB/PHBV exhibits markedly lower WVTR than PLA and polysaccharides, approaching polypropylene-like moisture protection in thicker gauges."
+        },
+        "contactAngle": {
+          "value": "70–85",
+          "numericValue": 78,
+          "numericRange": [70, 85],
+          "unit": "degrees (°)",
+          "testMethod": "Static water sessile drop",
+          "sampleThickness": "50–100 µm film",
+          "temperature": "20–25 °C",
+          "relativeHumidity": "Ambient",
+          "formulation": "Neat PHB / PHBV films",
+          "reference": "Published biopolymer surface wettability literature",
+          "sourceType": "Literature-reported",
+          "notes": "Higher surface hydrophobicity than starch, chitosan, or alginate films; exact angle varies with surface crystallization roughness."
+        },
+        "biodegradability": {
+          "value": "70–95% in compost (30–90 d); 30–80% in soil/marine (60–180 d)",
+          "numericValue": null,
+          "unit": "% weight loss / mineralization",
+          "testMethod": "ISO 14855 (compost), ASTM D5988 (soil), ASTM D6691 (marine)",
+          "sampleThickness": "50–200 µm films",
+          "temperature": "25–30 °C (soil/marine); 58 °C (compost)",
+          "relativeHumidity": "Soil/compost moisture 40–60%",
+          "formulation": "PHB and PHBV films",
+          "reference": "Emadian, Onay & Demirel (2017)",
+          "sourceType": "Literature-reported",
+          "notes": "Extracellular PHA depolymerases produced by diverse soil and marine microbes enable degradation without industrial thermophilic conditions."
+        },
+        "transparency": {
+          "value": "30–65% (translucent to semi-opaque; high haze)",
+          "numericValue": 48,
+          "numericRange": [30, 65],
+          "unit": "% transmittance",
+          "testMethod": "UV-Vis transmittance (550–600 nm)",
+          "sampleThickness": "40–80 µm",
+          "temperature": "23 °C",
+          "relativeHumidity": "50 % RH",
+          "formulation": "Melt-processed PHB / PHBV",
+          "reference": "Peelman et al. (2013)",
+          "sourceType": "Literature-reported",
+          "notes": "High degree of crystallinity scatters visible light, yielding translucent milky films unless formulated as ultra-thin coatings or medium-chain-length PHA blends."
+        },
+        "leachingMigration": {
+          "value": "Overall migration reported < 10 mg/dm² in aqueous & fatty simulants for purified grades",
+          "numericValue": null,
+          "unit": "mg/dm²",
+          "testMethod": "EU 10/2011 food-contact migration testing",
+          "sampleThickness": "100–250 µm",
+          "temperature": "40 °C (10 days)",
+          "relativeHumidity": "Immersion test",
+          "formulation": "Food-grade purified PHB / PHBV",
+          "reference": "Peelman et al. (2013)",
+          "sourceType": "Literature-reported",
+          "notes": "Downstream purification efficiency is critical to ensure negligible residual bacterial endotoxins, solvents, or processing nucleators."
+        },
+        "humidityResponse": {
+          "value": "Low sensitivity; tensile properties remain stable across 30–80% RH",
+          "numericValue": null,
+          "unit": "% RH vs. mechanical/barrier stability",
+          "testMethod": "Conditioned mechanical and WVTR testing",
+          "sampleThickness": "50 µm",
+          "temperature": "23 °C",
+          "relativeHumidity": "30 % to 80 % RH",
+          "formulation": "Neat PHB / PHBV",
+          "reference": "Siracusa et al. (2008)",
+          "sourceType": "Literature-reported",
+          "notes": "Hydrophobic polyester backbone resists water uptake (< 0.5 wt%), preventing severe RH-induced softening seen in polysaccharide films."
+        },
+        "loadBearingCapacity": {
+          "value": "Data not available (geometry & grade dependent)",
+          "numericValue": null,
+          "unit": "N or kg",
+          "testMethod": "Not standardized across general PHB/PHBV literature",
+          "sampleThickness": "Varies by thermoformed/molded part",
+          "temperature": "23 °C",
+          "relativeHumidity": "50 % RH",
+          "formulation": "PHBV trays / injection-molded items",
+          "reference": "Not standardized",
+          "sourceType": "Not available",
+          "notes": "Secondary aging embrittlement in unblended PHB reduces impact load resistance over storage time; container-level testing is required."
+        }
+      }
+    },
+    {
+      "id": "starch",
+      "name": "Starch-based Bioplastics",
+      "shortName": "Starch-based",
+      "family": "Polysaccharide (Thermoplastic Starch / TPS)",
+      "classification": "Bio-based & Biodegradable",
+      "biobasedOrigin": "Maize, potato, cassava (tapioca), wheat, or rice starch",
+      "biodegradationEnvironment": "Home compost, industrial compost, and soil",
+      "imagePath": "/src/assets/images/mat_starch_cellulose_1794766181010.jpg",
+      "imageCropClass": "object-left",
+      "shortIntro": "Abundant, low-cost polysaccharide films and thermoplastic starch (TPS) blends plasticized with glycerol or sorbitol for short-shelf-life dry and carry packaging.",
+      "introduction": "Native starch consists of linear amylose and branched amylopectin granules. Because native starch degrades before melting, it is gelatinized and melt-processed with plasticizers (such as glycerol, sorbitol, or water) under shear and heat to form Thermoplastic Starch (TPS), often blended with PBAT or PLA for commercial packaging.",
+      "chemicalStructure": {
+        "repeatingUnit": "(C6H10O5)n — α-(1→4) and α-(1→6) linked D-glucose",
+        "formulaNote": "Polysaccharide composed of linear α-(1→4)-D-glucan (amylose) and branched α-(1→4)/α-(1→6)-D-glucan (amylopectin) chains.",
+        "diagramType": "starch"
+      },
+      "sourceAndProduction": "Extracted from corn, potato, cassava, or wheat crops via wet milling, followed by extrusion or solution casting with 15–35 wt% polyol plasticizers (glycerol/sorbitol) and optional biodegradable polyesters (e.g., PBAT) to suppress retrogradation.",
+      "characteristics": [
+        "Highly hydrophilic due to abundant hydroxyl (-OH) groups along the glucose backbone.",
+        "Low oxygen permeability under dry conditions (< 50% RH), making it attractive for dry oxidation-sensitive products if protected from moisture.",
+        "Prone to retrogradation (recrystallization and embrittlement over time) and rapid property loss at high humidity.",
+        "Readily degraded by ubiquitous amylolytic enzymes in soil and compost."
+      ],
+      "applications": [
+        "Dry bakery bags, bread overwraps, and low-moisture snack liners (when blended with hydrophobic polyesters)",
+        "Expanded starch foam loose-fill cushioning and dry food trays",
+        "Soluble single-serve dry condiment or seasoning sachets",
+        "Carrier bags and produce sacks (typically TPS/PBAT blends)"
+      ],
+      "advantages": [
+        "Abundant agricultural feedstock availability and low raw polymer cost.",
+        "Rapid biodegradation in soil and home composting environments.",
+        "Good oxygen barrier at low relative humidity."
+      ],
+      "limitations": [
+        "Very poor water vapour barrier (high WVTR) and susceptibility to swelling or dissolution upon direct liquid water contact.",
+        "Low mechanical tensile strength in unblended TPS films compared to PLA or synthetic plastics.",
+        "Severe plasticization and loss of stiffness above 65–75% RH."
+      ],
+      "references": [
+        "Onyeaka, H., Obileke, K., Makaka, G., & Nwokolo, N. (2022). Current Research and Applications of Starch-Based Biodegradable Films for Food Packaging. Polymers, 14(6), 1126.",
+        "Perera, K. Y., Jaiswal, A. K., & Jaiswal, S. (2023). Biopolymer-Based Sustainable Food Packaging Materials: Challenges, Solutions, and Applications. Foods, 12(12), 2422.",
+        "Şomoghi, R., Mihai, S., & Oancea, F. (2025). An Overview of Bio-Based Polymers with Potential for Food Packaging Applications. Polymers, 17(17), 2335.",
+        "Siracusa, V., Rocculi, P., Romani, S., & Dalla Rosa, M. (2008). Biodegradable Polymers for Food Packaging: A Review. Trends in Food Science & Technology, 19, 634–643.",
+        "Peelman, N., Ragaert, P., De Meulenaer, B., Adons, D., Peeters, R., Cardon, L., et al. (2013). Application of Bioplastics for Food Packaging. Trends in Food Science & Technology, 32(2), 128–141.",
+        "Emadian, S. M., Onay, T. T., & Demirel, B. (2017). Biodegradation of Bioplastics in Natural Environments. Waste Management, 59, 526–536."
+      ],
+      "properties": {
+        "tensileStrength": {
+          "value": "4–25 (unblended plasticized TPS films); 15–35 (TPS/PBAT blends)",
+          "numericValue": 14.5,
+          "numericRange": [4, 25],
+          "unit": "MPa",
+          "testMethod": "ASTM D882",
+          "sampleThickness": "50–150 µm",
+          "temperature": "23 °C",
+          "relativeHumidity": "50 % RH",
+          "formulation": "Glycerol-plasticized corn/cassava TPS (20–30 wt% glycerol)",
+          "reference": "Siracusa et al. (2008); Peelman et al. (2013)",
+          "sourceType": "Literature-reported",
+          "notes": "Higher glycerol content reduces tensile strength sharply while raising elongation; amylose-rich starches yield stronger films."
+        },
+        "wvtr": {
+          "value": "350–1,800 (very high permeability; unblended TPS)",
+          "numericValue": 1050,
+          "numericRange": [350, 1800],
+          "unit": "g/m²/day",
+          "testMethod": "ASTM E96 (desiccant/water cup method)",
+          "sampleThickness": "50–100 µm",
+          "temperature": "23–38 °C",
+          "relativeHumidity": "50–90 % RH gradient",
+          "formulation": "Unblended plasticized TPS film",
+          "reference": "Peelman et al. (2013); Onyeaka et al. (2022)",
+          "sourceType": "Literature-reported",
+          "notes": "Values span a wide range because moisture diffusivity increases exponentially with ambient RH and plasticizer fraction; blending with PBAT or wax coatings reduces WVTR."
+        },
+        "contactAngle": {
+          "value": "35–58",
+          "numericValue": 46,
+          "numericRange": [35, 58],
+          "unit": "degrees (°)",
+          "testMethod": "Static water sessile drop (initial reading)",
+          "sampleThickness": "60–120 µm",
+          "temperature": "23 °C",
+          "relativeHumidity": "50 % RH",
+          "formulation": "Glycerol-plasticized TPS film",
+          "reference": "Published starch film characterization literature",
+          "sourceType": "Literature-reported",
+          "notes": "Strongly hydrophilic surface (< 60°); water droplets rapidly spread and absorb into uncrosslinked starch films."
+        },
+        "biodegradability": {
+          "value": "80–100% degradation in soil/compost within 28–90 days",
+          "numericValue": null,
+          "unit": "% mineralization / mass loss",
+          "testMethod": "ISO 14855 (compost) / ASTM D5988 (soil)",
+          "sampleThickness": "50–150 µm film",
+          "temperature": "25–58 °C",
+          "relativeHumidity": "45–60 % substrate moisture",
+          "formulation": "TPS and TPS/starch blends",
+          "reference": "Emadian, Onay & Demirel (2017)",
+          "sourceType": "Literature-reported",
+          "notes": "Native starch component degrades rapidly via microbial α-amylases; blend co-polymers (e.g., PBAT or PCL) dictate final mineralization rate."
+        },
+        "transparency": {
+          "value": "55–85% (cast amylose-rich films translucent; blends lower)",
+          "numericValue": 70,
+          "numericRange": [55, 85],
+          "unit": "% transmittance",
+          "testMethod": "UV-Vis spectrophotometry (600 nm)",
+          "sampleThickness": "50–100 µm",
+          "temperature": "23 °C",
+          "relativeHumidity": "50 % RH",
+          "formulation": "Solution-cast starch/glycerol film",
+          "reference": "Literature starch film optical studies",
+          "sourceType": "Literature-reported",
+          "notes": "Extruded TPS/PBAT commercial bags are typically translucent to opaque white rather than optically clear."
+        },
+        "leachingMigration": {
+          "value": "High glycerol & soluble carbohydrate leaching in aqueous media; requires hydrophobic barrier for wet food",
+          "numericValue": null,
+          "unit": "Qualitative / simulant-dependent",
+          "testMethod": "Water immersion & EU 10/2011 aqueous simulants",
+          "sampleThickness": "50–120 µm",
+          "temperature": "23–40 °C",
+          "relativeHumidity": "Immersion",
+          "formulation": "Glycerol-plasticized TPS",
+          "reference": "Peelman et al. (2013)",
+          "sourceType": "Literature-reported",
+          "notes": "Unmodified TPS swells and loses plasticizer in contact with high-moisture foods; therefore restricted mainly to dry foods unless laminated."
+        },
+        "humidityResponse": {
+          "value": "Severe moisture uptake (> 15–30 wt% at ≥ 75% RH); sharp tensile strength drop & swelling",
+          "numericValue": null,
+          "unit": "% RH vs. sorption & strength",
+          "testMethod": "Sorption isotherms & RH-conditioned ASTM D882",
+          "sampleThickness": "60–100 µm",
+          "temperature": "23 °C",
+          "relativeHumidity": "30 % to 90 % RH",
+          "formulation": "Glycerol-plasticized TPS",
+          "reference": "Siracusa et al. (2008); Peelman et al. (2013)",
+          "sourceType": "Literature-reported",
+          "notes": "Water acts as a potent secondary plasticizer, lowering tensile modulus and exponentially increasing gas/vapour permeability above 65% RH."
+        },
+        "loadBearingCapacity": {
+          "value": "Data not available (unblended TPS unsuitable for wet structural loads)",
+          "numericValue": null,
+          "unit": "N or kg",
+          "testMethod": "Not standardized for neat TPS films",
+          "sampleThickness": "Varies by blend / foam geometry",
+          "temperature": "23 °C",
+          "relativeHumidity": "50 % RH",
+          "formulation": "Unblended TPS",
+          "reference": "Not standardized",
+          "sourceType": "Not available",
+          "notes": "Commercial TPS/PBAT carry bags are rated via dart-drop or bag-drop tests (e.g., IS/ISO standards), which vary by blend ratio and thickness."
+        }
+      }
+    },
+    {
+      "id": "cellulose",
+      "name": "Cellulose-based Materials",
+      "shortName": "Cellulose-based",
+      "family": "Polysaccharide & Derivatives",
+      "classification": "Bio-based (Biodegradability varies by modification)",
+      "biobasedOrigin": "Wood pulp, cotton linters, agricultural residues (bagasse, bamboo)",
+      "biodegradationEnvironment": "Regenerated cellulose degrades in soil/compost; highly substituted cellulose acetate degrades slowly",
+      "imagePath": "/src/assets/images/mat_starch_cellulose_1794766181010.jpg",
+      "imageCropClass": "object-right",
+      "shortIntro": "Versatile plant-derived polymers spanning regenerated cellulose films (cellophane) and esterified derivatives (cellulose acetate) with high tensile strength and optical gloss.",
+      "introduction": "Cellulose is the most abundant natural polymer on Earth. For packaging films, it is processed either as regenerated cellulose (via viscose or NMMO/Lyocell dissolution—known commercially as cellophane) or chemically esterified into thermoplastic cellulose derivatives such as cellulose acetate (CA) or nanocellulose barrier coatings.",
+      "chemicalStructure": {
+        "repeatingUnit": "(C6H10O5)n — β-(1→4)-linked D-anhydroglucopyranose",
+        "formulaNote": "Linear β-(1→4) glucan chain forming dense intra- and intermolecular hydrogen-bond networks; derivatives substitute C2, C3, C6 hydroxyls (e.g., acetyl groups in CA).",
+        "diagramType": "cellulose"
+      },
+      "sourceAndProduction": "Dissolving wood pulp or cotton linters are purified and regenerated into thin films via xanthate/viscose or NMMO dissolution, or acetylated with acetic anhydride to produce melt-processable cellulose acetate; coated grades use nitrocellulose or PVDC/bio-wax moisture barriers.",
+      "characteristics": [
+        "High mechanical tensile strength and stiffness due to extensive hydrogen bonding and high crystallinity.",
+        "Regenerated cellulose films provide excellent clarity, dead-fold properties, and low dry-state oxygen permeability.",
+        "Uncoated cellophane is moisture-sensitive; commercial food packaging grades typically apply thin moisture-barrier coatings.",
+        "Degree of substitution (DS) strongly controls biodegradability—unmodified cellophane degrades rapidly, whereas high-DS cellulose acetate degrades slowly."
+      ],
+      "applications": [
+        "Twist-wrap confectionery and baked goods (high dead-fold retention)",
+        "Dry tea, coffee, spices, and pasta pouches (barrier-coated regenerated cellulose)",
+        "Transparent window cartons for bakery and fresh produce",
+        "Nanocellulose oxygen-barrier inner coatings on paperboard"
+      ],
+      "advantages": [
+        "High tensile strength and dimensional stiffness at thin gauges (20–35 µm).",
+        "High optical transparency and grease/oil resistance in dry environments.",
+        "Non-melting thermal stability up to ~180–200°C (regenerated cellulose)."
+      ],
+      "limitations": [
+        "Uncoated regenerated cellulose has very high WVTR and swells in humid conditions.",
+        "Regenerated cellulose cannot be heat-sealed directly without a heat-sealable coating layer.",
+        "Viscose chemical processing raises environmental effluent concerns unless closed-loop solvent systems are used; high-DS derivatives lose rapid biodegradability."
+      ],
+      "references": [
+        "Şomoghi, R., Mihai, S., & Oancea, F. (2025). An Overview of Bio-Based Polymers with Potential for Food Packaging Applications. Polymers, 17(17), 2335.",
+        "Perera, K. Y., Jaiswal, A. K., & Jaiswal, S. (2023). Biopolymer-Based Sustainable Food Packaging Materials: Challenges, Solutions, and Applications. Foods, 12(12), 2422.",
+        "Cruz, R. M. S., et al. (2022). Bioplastics for Food Packaging: Environmental Impact, Trends and Regulatory Aspects. Foods, 11(19), 3087.",
+        "Siracusa, V., Rocculi, P., Romani, S., & Dalla Rosa, M. (2008). Biodegradable Polymers for Food Packaging: A Review. Trends in Food Science & Technology, 19, 634–643.",
+        "Peelman, N., Ragaert, P., De Meulenaer, B., Adons, D., Peeters, R., Cardon, L., et al. (2013). Application of Bioplastics for Food Packaging. Trends in Food Science & Technology, 32(2), 128–141."
+      ],
+      "properties": {
+        "tensileStrength": {
+          "value": "55–120 (regenerated cellulose); 40–85 (plasticized CA)",
+          "numericValue": 85,
+          "numericRange": [55, 120],
+          "unit": "MPa",
+          "testMethod": "ASTM D882",
+          "sampleThickness": "20–45 µm",
+          "temperature": "23 °C",
+          "relativeHumidity": "50 % RH",
+          "formulation": "Uncoated regenerated cellulose film (cellophane)",
+          "reference": "Siracusa et al. (2008); Peelman et al. (2013)",
+          "sourceType": "Literature-reported",
+          "notes": "Machine-direction (MD) strength in regenerated cellulose often exceeds 100 MPa; transverse direction (TD) is lower due to sheet orientation."
+        },
+        "wvtr": {
+          "value": "300–1,400 (uncoated); 10–30 (moisture-barrier coated grades)",
+          "numericValue": 850,
+          "numericRange": [300, 1400],
+          "unit": "g/m²/day",
+          "testMethod": "ASTM E96 / ASTM F1249",
+          "sampleThickness": "23–35 µm",
+          "temperature": "38 °C",
+          "relativeHumidity": "90 % RH",
+          "formulation": "Uncoated regenerated cellulose vs. coated commercial cellophane",
+          "reference": "Peelman et al. (2013)",
+          "sourceType": "Literature-reported",
+          "notes": "Must distinguish uncoated hydrophilic cellulose (high WVTR) from commercial barrier-coated cellulose films engineered for moisture protection."
+        },
+        "contactAngle": {
+          "value": "25–45 (regenerated cellulose); 55–72 (cellulose acetate)",
+          "numericValue": 35,
+          "numericRange": [25, 45],
+          "unit": "degrees (°)",
+          "testMethod": "Static water sessile drop",
+          "sampleThickness": "25–50 µm",
+          "temperature": "23 °C",
+          "relativeHumidity": "50 % RH",
+          "formulation": "Uncoated regenerated cellulose film",
+          "reference": "Literature polysaccharide surface studies",
+          "sourceType": "Literature-reported",
+          "notes": "Abundant free hydroxyl groups make uncoated regenerated cellulose strongly wettable; esterification raises contact angle."
+        },
+        "biodegradability": {
+          "value": "Regenerated cellulose: > 80% in compost/soil (30–90 d); Cellulose acetate: slow, DS-dependent",
+          "numericValue": null,
+          "unit": "% mass loss / CO2 evolution",
+          "testMethod": "ISO 14855 / ASTM D5988",
+          "sampleThickness": "25–50 µm",
+          "temperature": "25–58 °C",
+          "relativeHumidity": "50–60 % moisture",
+          "formulation": "Uncoated regenerated cellulose vs. cellulose acetate (DS ~2.5)",
+          "reference": "Siracusa et al. (2008); Peelman et al. (2013)",
+          "sourceType": "Literature-reported",
+          "notes": "Synthetic coatings or high degree of acetyl substitution (> 2.2) significantly retard microbial cellulase accessibility."
+        },
+        "transparency": {
+          "value": "88–93% (high optical clarity)",
+          "numericValue": 90.5,
+          "numericRange": [88, 93],
+          "unit": "% transmittance",
+          "testMethod": "ASTM D1003 / UV-Vis (550–600 nm)",
+          "sampleThickness": "25–35 µm",
+          "temperature": "23 °C",
+          "relativeHumidity": "50 % RH",
+          "formulation": "Commercial regenerated cellulose film",
+          "reference": "Peelman et al. (2013)",
+          "sourceType": "Literature-reported",
+          "notes": "Comparable to oriented polypropylene and PET windows for bakery and dry-food visibility."
+        },
+        "leachingMigration": {
+          "value": "Low polymer migration for pure cellulose; depends on plasticizer (e.g., glycerol/PEG) & lacquer coating",
+          "numericValue": null,
+          "unit": "mg/dm² (food simulant)",
+          "testMethod": "EU 10/2011 & regenerated cellulose film Directive 2007/42/EC context",
+          "sampleThickness": "25–40 µm",
+          "temperature": "40 °C",
+          "relativeHumidity": "Immersion",
+          "formulation": "Food-contact regenerated cellulose",
+          "reference": "Peelman et al. (2013)",
+          "sourceType": "Literature-reported",
+          "notes": "Softeners (polyols) used in regenerated cellulose can migrate into wet foods unless separated by an inner food-contact lacquer."
+        },
+        "humidityResponse": {
+          "value": "Substantial softening & O2 barrier loss above 70% RH in uncoated films; coated grades remain stable",
+          "numericValue": null,
+          "unit": "% RH vs. barrier & modulus",
+          "testMethod": "RH-stepped OTR and tensile testing",
+          "sampleThickness": "25–30 µm",
+          "temperature": "23 °C",
+          "relativeHumidity": "20 % to 85 % RH",
+          "formulation": "Uncoated vs. coated regenerated cellulose",
+          "reference": "Peelman et al. (2013)",
+          "sourceType": "Literature-reported",
+          "notes": "Oxygen transmission rate can jump by an order of magnitude as RH exceeds 75% in uncoated cellulose due to hydrogen-bond disruption."
+        },
+        "loadBearingCapacity": {
+          "value": "Data not available (film-only material; requires rigid substrate for load)",
+          "numericValue": null,
+          "unit": "N or kg",
+          "testMethod": "Not applicable as standalone rigid load-bearing container",
+          "sampleThickness": "20–45 µm",
+          "temperature": "23 °C",
+          "relativeHumidity": "50 % RH",
+          "formulation": "Thin regenerated cellulose film",
+          "reference": "Not standardized",
+          "sourceType": "Not available",
+          "notes": "Used primarily as flexible wrapping/lidding or laminated onto molded pulp/paperboard trays for structural load."
+        }
+      }
+    },
+    {
+      "id": "chitosan",
+      "name": "Chitosan-based Films",
+      "shortName": "Chitosan-based",
+      "family": "Aminopolysaccharide (Marine / Fungal)",
+      "classification": "Bio-based & Biodegradable",
+      "biobasedOrigin": "Deacetylation of chitin from crustacean shells (shrimp/crab waste) or fungal cell walls",
+      "biodegradationEnvironment": "Soil, compost, and enzymatic biological media",
+      "imagePath": "/src/assets/images/mat_chitosan_alginate_1794766182717.jpg",
+      "imageCropClass": "object-left",
+      "shortIntro": "Cationic aminopolysaccharide films valued in active food packaging research for intrinsic antimicrobial activity, film-forming ability, and grease resistance.",
+      "introduction": "Chitosan is a linear cationic copolymer obtained by alkaline deacetylation of chitin, the second most abundant natural biopolymer after cellulose. Soluble in dilute organic acids (e.g., 1% acetic or lactic acid), chitosan casts into cohesive, semi-transparent films with notable antimicrobial and oxygen-barrier properties at low humidity.",
+      "chemicalStructure": {
+        "repeatingUnit": "β-(1→4)-linked D-glucosamine & N-acetyl-D-glucosamine",
+        "formulaNote": "Random copolymer whose properties depend on Degree of Deacetylation (DD, typically 70–95%) and molecular weight (Mw).",
+        "diagramType": "chitosan"
+      },
+      "sourceAndProduction": "Chitin recovered from seafood processing by-products (shrimp/crab shells) or fungal biomass undergoes demineralization, deproteinization, and concentrated NaOH deacetylation. Films are predominantly produced by laboratory solution casting from dilute acidic aqueous solutions.",
+      "characteristics": [
+        "Polycationic amino groups (-NH3+ below pKa ~6.3) impart broad-spectrum antimicrobial activity against food spoilage bacteria and fungi.",
+        "Good oxygen barrier and grease resistance under dry conditions.",
+        "Currently produced mostly via solution casting rather than melt extrusion, as chitosan decomposes prior to melting.",
+        "Mechanical and barrier behaviour varies strongly with acid solvent type, glycerol plasticizer, and DD."
+      ],
+      "applications": [
+        "Edible antimicrobial coatings on fresh fruits, berries, and minimally processed produce",
+        "Active food packaging interleavers or surface coatings for chilled meat and poultry",
+        "Antioxidant/antimicrobial active nanocomposite films (research stage)",
+        "Specialty thin wraps for short-term perishable preservation"
+      ],
+      "advantages": [
+        "Valorizes seafood/crustacean waste streams into functional biopolymers.",
+        "Intrinsic antimicrobial and film-forming properties without synthetic biocides.",
+        "Biodegradable and non-toxic in tested food-coating research contexts."
+      ],
+      "limitations": [
+        "Not melt-processable (thermally degrades before melting), limiting high-speed industrial film extrusion.",
+        "High water vapour permeability and swelling in wet or acidic environments unless crosslinked or blended.",
+        "Slight amber/yellowish tint and potential acetic acid odour if residual solvent is not neutralized/removed; allergen disclosure considerations for crustacean-derived grades."
+      ],
+      "references": [
+        "Perera, K. Y., Jaiswal, A. K., & Jaiswal, S. (2023). Biopolymer-Based Sustainable Food Packaging Materials: Challenges, Solutions, and Applications. Foods, 12(12), 2422.",
+        "Shi, X., Cui, L., Xu, C., & Wu, S. (2025). Next-Generation Bioplastics for Food Packaging: Sustainable Materials and Applications. Materials, 18(12), 2919.",
+        "Şomoghi, R., Mihai, S., & Oancea, F. (2025). An Overview of Bio-Based Polymers with Potential for Food Packaging Applications. Polymers, 17(17), 2335.",
+        "Siracusa, V., Rocculi, P., Romani, S., & Dalla Rosa, M. (2008). Biodegradable Polymers for Food Packaging: A Review. Trends in Food Science & Technology, 19, 634–643.",
+        "Peelman, N., Ragaert, P., De Meulenaer, B., Adons, D., Peeters, R., Cardon, L., et al. (2013). Application of Bioplastics for Food Packaging. Trends in Food Science & Technology, 32(2), 128–141."
+      ],
+      "properties": {
+        "tensileStrength": {
+          "value": "25–65 (neat unplasticized cast film); 12–35 (glycerol-plasticized)",
+          "numericValue": 40,
+          "numericRange": [25, 65],
+          "unit": "MPa",
+          "testMethod": "ASTM D882 (laboratory cast film strips)",
+          "sampleThickness": "30–80 µm",
+          "temperature": "23–25 °C",
+          "relativeHumidity": "50 % RH",
+          "formulation": "Medium-Mw chitosan (DD 75–90%) cast from 1% v/v acetic acid",
+          "reference": "Siracusa et al. (2008); published chitosan film characterization studies",
+          "sourceType": "Literature-reported",
+          "notes": "Values vary considerably by molecular weight, acid counterion (acetic vs. lactic), and glycerol plasticizer concentration."
+        },
+        "wvtr": {
+          "value": "400–1,500 (high moisture permeability)",
+          "numericValue": 950,
+          "numericRange": [400, 1500],
+          "unit": "g/m²/day",
+          "testMethod": "ASTM E96 modified cup method",
+          "sampleThickness": "40–80 µm",
+          "temperature": "25 °C",
+          "relativeHumidity": "50–75 % RH gradient",
+          "formulation": "Solution-cast chitosan film",
+          "reference": "Published active-film literature (Peelman et al., 2013 context)",
+          "sourceType": "Literature-reported",
+          "notes": "Note lower test temperature (25°C) compared to standard 38°C/90% RH polyester tests; direct numerical comparison with PLA/PHA at 38°C is invalid without normalization."
+        },
+        "contactAngle": {
+          "value": "60–88 (varies strongly with residual acetate & drying)",
+          "numericValue": 74,
+          "numericRange": [60, 88],
+          "unit": "degrees (°)",
+          "testMethod": "Static water sessile drop",
+          "sampleThickness": "30–70 µm",
+          "temperature": "23 °C",
+          "relativeHumidity": "Ambient",
+          "formulation": "Neat solvent-cast chitosan",
+          "reference": "Published chitosan surface characterization literature",
+          "sourceType": "Literature-reported",
+          "notes": "Despite moderate initial contact angles due to acetylated segments, prolonged water contact causes film swelling."
+        },
+        "biodegradability": {
+          "value": "Rapid enzymatic & soil degradation (> 70% mass loss reported in 30–60 days in active soil)",
+          "numericValue": null,
+          "unit": "% mass loss / enzymatic hydrolysis",
+          "testMethod": "Soil burial & lysozyme/chitinase enzymatic assays (non-standardized lab protocols)",
+          "sampleThickness": "30–80 µm",
+          "temperature": "25–37 °C",
+          "relativeHumidity": "Moist soil / aqueous buffer",
+          "formulation": "Uncrosslinked solution-cast chitosan",
+          "reference": "Siracusa et al. (2008)",
+          "sourceType": "Literature-reported",
+          "notes": "Formal ISO 14855 industrial certification datasets are less common for standalone cast chitosan than for commercial resins like PLA/PHA."
+        },
+        "transparency": {
+          "value": "70–88% at 600 nm (slight amber/yellow tint at UV-blue wavelengths)",
+          "numericValue": 79,
+          "numericRange": [70, 88],
+          "unit": "% transmittance",
+          "testMethod": "UV-Vis spectrophotometry (600 nm)",
+          "sampleThickness": "40–60 µm",
+          "temperature": "23 °C",
+          "relativeHumidity": "50 % RH",
+          "formulation": "Neat cast chitosan film",
+          "reference": "Published chitosan optical characterization studies",
+          "sourceType": "Literature-reported",
+          "notes": "Lower transmittance in 280–400 nm UV range can offer partial UV-light protection for lipid-rich foods."
+        },
+        "leachingMigration": {
+          "value": "Swelling and partial dissolution in acidic aqueous food simulants (pH < 5.5); data test-specific",
+          "numericValue": null,
+          "unit": "Solubility / migration behaviour",
+          "testMethod": "Aqueous & acidic simulant immersion (pH-dependent)",
+          "sampleThickness": "40–80 µm",
+          "temperature": "25 °C",
+          "relativeHumidity": "Immersion",
+          "formulation": "Uncrosslinked acetic-acid cast chitosan",
+          "reference": "Published food-contact biopolymer reviews",
+          "sourceType": "Literature-reported",
+          "notes": "Protonation of amine groups in acidic foods triggers swelling or release of incorporated active compounds; neutralization or crosslinking reduces leaching."
+        },
+        "humidityResponse": {
+          "value": "Marked water sorption above 65% RH; tensile strength decreases while elongation rises",
+          "numericValue": null,
+          "unit": "% RH vs. tensile & barrier shift",
+          "testMethod": "Conditioned tensile & sorption isotherm testing",
+          "sampleThickness": "40–70 µm",
+          "temperature": "23–25 °C",
+          "relativeHumidity": "30 % to 85 % RH",
+          "formulation": "Plasticized and unplasticized chitosan films",
+          "reference": "Siracusa et al. (2008)",
+          "sourceType": "Literature-reported",
+          "notes": "At elevated RH (> 75%), oxygen barrier drops significantly due to plasticization of the hydrogen-bonded network."
+        },
+        "loadBearingCapacity": {
+          "value": "Data not available (not established for load-bearing packaging)",
+          "numericValue": null,
+          "unit": "N or kg",
+          "testMethod": "No standardized structural load-bearing test data",
+          "sampleThickness": "30–80 µm lab-cast film",
+          "temperature": "N/A",
+          "relativeHumidity": "N/A",
+          "formulation": "Solution-cast chitosan film",
+          "reference": "Data not available",
+          "sourceType": "Not available",
+          "notes": "Chitosan is studied as a thin functional coating, edible wrap, or composite layer rather than a standalone load-bearing container."
+        }
+      }
+    },
+    {
+      "id": "alginate",
+      "name": "Alginate-based Films",
+      "shortName": "Alginate-based",
+      "family": "Marine Polysaccharide (Brown Algae)",
+      "classification": "Bio-based & Biodegradable",
+      "biobasedOrigin": "Extracted from brown seaweeds (Phaeophyceae, e.g., Laminaria, Macrocystis)",
+      "biodegradationEnvironment": "Soil, compost, and aqueous microbial media",
+      "imagePath": "/src/assets/images/mat_chitosan_alginate_1794766182717.jpg",
+      "imageCropClass": "object-right",
+      "shortIntro": "Water-soluble seaweed polysaccharide films capable of ionic crosslinking with divalent calcium ions (Ca2+) to form cohesive, transparent edible coatings and sachets.",
+      "introduction": "Alginates are anionic linear polysaccharides harvested from brown marine macroalgae. Sodium alginate dissolves readily in water to cast clear films, while immersion or treatment with divalent cations (especially Ca2+) creates an ionic 'egg-box' crosslinked network that improves water resistance and mechanical cohesion.",
+      "chemicalStructure": {
+        "repeatingUnit": "(1→4)-linked β-D-mannuronate (M) and α-L-guluronate (G) blocks",
+        "formulaNote": "Linear anionic copolymer of M- and G-uronic acid residues; guluronate (G) blocks selectively chelate Ca2+ ions to form crosslinked hydrogel networks.",
+        "diagramType": "alginate"
+      },
+      "sourceAndProduction": "Brown seaweed biomass is washed, acid-treated, and alkali-extracted to yield soluble sodium alginate. Packaging films are produced via aqueous solution casting (often with glycerol) followed optionally by CaCl2 bath crosslinking.",
+      "characteristics": [
+        "Forms transparent, glossy, oil-resistant films from purely aqueous solutions without organic solvents.",
+        "Ionic crosslinking with Ca2+ converts water-soluble sodium alginate into water-insoluble calcium alginate hydrogels.",
+        "Good oxygen and lipid barrier at low relative humidity.",
+        "Non-thermoplastic; decomposes on heating rather than melting."
+      ],
+      "applications": [
+        "Edible water-soluble dry soup, coffee, and seasoning pouches",
+        "Calcium-crosslinked protective dip coatings for fresh-cut fruits and vegetables",
+        "Oil-resistant wrapping membranes for low-moisture bakery or cheese portions",
+        "Active antioxidant/antimicrobial carrier films (research stage)"
+      ],
+      "advantages": [
+        "Renewable marine feedstock requiring no arable land or freshwater irrigation.",
+        "Mild aqueous casting process and food-grade E-number regulatory familiarity (sodium/calcium alginate as food additives).",
+        "Tunable water insolubility via simple food-safe Ca2+ crosslinking."
+      ],
+      "limitations": [
+        "Uncrosslinked sodium alginate dissolves rapidly on contact with liquid water.",
+        "High water vapour transmission rate (WVTR) even after calcium crosslinking.",
+        "Cannot be processed via standard plastic melt extrusion or injection molding."
+      ],
+      "references": [
+        "Perera, K. Y., Jaiswal, A. K., & Jaiswal, S. (2023). Biopolymer-Based Sustainable Food Packaging Materials: Challenges, Solutions, and Applications. Foods, 12(12), 2422.",
+        "Şomoghi, R., Mihai, S., & Oancea, F. (2025). An Overview of Bio-Based Polymers with Potential for Food Packaging Applications. Polymers, 17(17), 2335.",
+        "Siracusa, V., Rocculi, P., Romani, S., & Dalla Rosa, M. (2008). Biodegradable Polymers for Food Packaging: A Review. Trends in Food Science & Technology, 19, 634–643.",
+        "Peelman, N., Ragaert, P., De Meulenaer, B., Adons, D., Peeters, R., Cardon, L., et al. (2013). Application of Bioplastics for Food Packaging. Trends in Food Science & Technology, 32(2), 128–141."
+      ],
+      "properties": {
+        "tensileStrength": {
+          "value": "15–45 (neat/plasticized Na-alginate); 30–70 (Ca2+-crosslinked)",
+          "numericValue": 32,
+          "numericRange": [15, 70],
+          "unit": "MPa",
+          "testMethod": "ASTM D882 (laboratory cast films)",
+          "sampleThickness": "30–80 µm",
+          "temperature": "23–25 °C",
+          "relativeHumidity": "50 % RH",
+          "formulation": "Sodium alginate + 20–30% glycerol vs. CaCl2-crosslinked film",
+          "reference": "Published alginate film characterization literature",
+          "sourceType": "Literature-reported",
+          "notes": "G-block rich alginates crosslink more densely with Ca2+, achieving higher tensile strength and reduced elongation."
+        },
+        "wvtr": {
+          "value": "600–2,000 (high moisture transmission)",
+          "numericValue": 1300,
+          "numericRange": [600, 2000],
+          "unit": "g/m²/day",
+          "testMethod": "ASTM E96 cup method",
+          "sampleThickness": "40–80 µm",
+          "temperature": "25 °C",
+          "relativeHumidity": "50–75 % RH gradient",
+          "formulation": "Plasticized sodium/calcium alginate cast films",
+          "reference": "Published polysaccharide film literature",
+          "sourceType": "Literature-reported",
+          "notes": "Measured mostly at 25°C; inherently hydrophilic uronate backbone offers minimal moisture vapour barrier without lipid or wax layering."
+        },
+        "contactAngle": {
+          "value": "20–45 (Na-alginate); 40–65 (Ca2+-crosslinked)",
+          "numericValue": 38,
+          "numericRange": [20, 65],
+          "unit": "degrees (°)",
+          "testMethod": "Static water sessile drop",
+          "sampleThickness": "30–70 µm",
+          "temperature": "23 °C",
+          "relativeHumidity": "Ambient",
+          "formulation": "Cast alginate films before and after CaCl2 crosslinking",
+          "reference": "Published alginate surface characterization studies",
+          "sourceType": "Literature-reported",
+          "notes": "Strongly hydrophilic surface; water droplets rapidly wet uncrosslinked sodium alginate films."
+        },
+        "biodegradability": {
+          "value": "Rapid microbial/soil breakdown (weeks in moist compost/soil)",
+          "numericValue": null,
+          "unit": "% mass loss (study-specific)",
+          "testMethod": "Soil burial & aqueous microbial assays",
+          "sampleThickness": "30–80 µm",
+          "temperature": "25–30 °C",
+          "relativeHumidity": "Moist soil",
+          "formulation": "Unblended sodium or calcium alginate film",
+          "reference": "Siracusa et al. (2008) biopolymer context",
+          "sourceType": "Literature-reported",
+          "notes": "Marine and soil bacteria produce alginate lyases that depolymerize the uronate chain; standardized ISO 14855 data for commercial sheets remain limited."
+        },
+        "transparency": {
+          "value": "80–91% at 600 nm (clear glossy cast film)",
+          "numericValue": 85.5,
+          "numericRange": [80, 91],
+          "unit": "% transmittance",
+          "testMethod": "UV-Vis spectrophotometry (600 nm)",
+          "sampleThickness": "30–60 µm",
+          "temperature": "23 °C",
+          "relativeHumidity": "50 % RH",
+          "formulation": "Aqueous-cast sodium alginate film",
+          "reference": "Published alginate film optical studies",
+          "sourceType": "Literature-reported",
+          "notes": "Excessive CaCl2 surface precipitation or phase-separated lipid additives reduce optical transmittance."
+        },
+        "leachingMigration": {
+          "value": "Uncrosslinked Na-alginate dissolves in water; Ca2+-crosslinked films may exchange Ca2+ / glycerol in aqueous media",
+          "numericValue": null,
+          "unit": "Qualitative / aqueous stability",
+          "testMethod": "Water solubility & simulant immersion tests",
+          "sampleThickness": "40–80 µm",
+          "temperature": "23–25 °C",
+          "relativeHumidity": "Immersion",
+          "formulation": "Na-alginate vs. Ca2+-crosslinked alginate",
+          "reference": "Published food-coating literature",
+          "sourceType": "Literature-reported",
+          "notes": "Suitable as an intentionally edible/dissolvable dry sachet or as a Ca2+-crosslinked coating; chelators in food can soften Ca-alginate networks."
+        },
+        "humidityResponse": {
+          "value": "High moisture sorption above 60% RH; film softens and loses tensile stiffness",
+          "numericValue": null,
+          "unit": "% RH vs. sorption & mechanics",
+          "testMethod": "Conditioned tensile & moisture sorption isotherms",
+          "sampleThickness": "40–70 µm",
+          "temperature": "23–25 °C",
+          "relativeHumidity": "30 % to 85 % RH",
+          "formulation": "Glycerol-plasticized alginate films",
+          "reference": "Published polysaccharide film literature",
+          "sourceType": "Literature-reported",
+          "notes": "Ca2+ crosslinking lowers equilibrium water swelling compared to Na-alginate, though high-RH tensile softening still occurs."
+        },
+        "loadBearingCapacity": {
+          "value": "Data not available (thin edible/coatings film; non-structural)",
+          "numericValue": null,
+          "unit": "N or kg",
+          "testMethod": "No standardized load-bearing packaging test data",
+          "sampleThickness": "30–80 µm",
+          "temperature": "N/A",
+          "relativeHumidity": "N/A",
+          "formulation": "Cast alginate film",
+          "reference": "Data not available",
+          "sourceType": "Not available",
+          "notes": "Alginate films are designed for thin pouches, casings, or coatings rather than rigid load-bearing containers."
+        }
+      }
+    }
+  ]
+}

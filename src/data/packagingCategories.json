@@ -1,0 +1,347 @@
+{
+  "disclaimer": "Preliminary Application Exploration Only: The candidate bioplastics below are mapped according to general material property tendencies reported in scientific literature. This tool does not declare any single material as universally best. Real-world food-packaging qualification requires laboratory shelf-life validation for the specific food matrix, formulation/coating grade, storage temperature/humidity, and applicable food-contact safety regulations.",
+  "categories": [
+    {
+      "id": "fresh-vegetables",
+      "name": "Fresh Vegetables",
+      "summary": "Respiring produce requiring balanced gas exchange (O2/CO2), controlled moisture retention without condensation fogging, and bruising protection.",
+      "keyRequirements": [
+        {
+          "title": "Moisture Management",
+          "detail": "Prevents wilting and weight loss while avoiding excessive headspace condensation that accelerates microbial rot."
+        },
+        {
+          "title": "Controlled Gas Exchange",
+          "detail": "Respiring greens require tailored O2/CO2 permeability (often via micro-perforation or breathable films) to avoid anaerobic fermentation."
+        },
+        {
+          "title": "Mechanical Protection",
+          "detail": "Rigid punnets or tear-resistant wraps protect leafy and crisp vegetables during handling and cold-chain transit."
+        }
+      ],
+      "relevantProperties": [
+        {
+          "propertyKey": "wvtr",
+          "propertyName": "Water Vapour Transmission Rate (WVTR)",
+          "whyItMatters": "Too low a WVTR traps transpiration water as droplets; moderate or tailored WVTR helps maintain turgor without waterlogging."
+        },
+        {
+          "propertyKey": "transparency",
+          "propertyName": "Optical Transparency",
+          "whyItMatters": "Retail produce buyers rely on clear visual inspection of leaf freshness and absence of bruising."
+        },
+        {
+          "propertyKey": "humidityResponse",
+          "propertyName": "Humidity Response",
+          "whyItMatters": "Cold-chain produce environments frequently exceed 80–90% RH, which can soften highly hydrophilic films."
+        }
+      ],
+      "candidateMaterials": [
+        {
+          "materialId": "pla",
+          "materialName": "PLA (Polylactic Acid)",
+          "roleContext": "Thermoformed rigid punnets, clamshells, and micro-perforated overwrap films.",
+          "consideration": "Offers high transparency and stiffness at 4–8°C cold-chain temperatures; unmodified PLA requires micro-perforation for high-respiration produce."
+        },
+        {
+          "materialId": "cellulose",
+          "materialName": "Cellulose-based Materials",
+          "roleContext": "Semi-permeable window films or breathable produce pouches (grade-dependent).",
+          "consideration": "Uncoated cellulose swells at high RH; semi-permeable coated grades must be matched to produce transpiration rates."
+        },
+        {
+          "materialId": "starch",
+          "materialName": "Starch-based Bioplastics",
+          "roleContext": "TPS/PBAT blended breathable produce bags.",
+          "consideration": "Pure TPS softens under condensation; commercial polyester-blended grades are needed for wet cold-chain resilience."
+        }
+      ],
+      "validationNote": "Evaluate respiration rate of the specific vegetable cultivar alongside film micro-perforation density and refrigerated RH stability."
+    },
+    {
+      "id": "fresh-fruits",
+      "name": "Fresh Fruits",
+      "summary": "Delicate, moisture-rich crops susceptible to mechanical bruising, ethylene/gas accumulation, and fungal spoilage.",
+      "keyRequirements": [
+        {
+          "title": "Moisture Control",
+          "detail": "Minimizes dehydration shrinkage in berries and stone fruits while avoiding surface condensation that triggers mould growth."
+        },
+        {
+          "title": "Gas Permeability",
+          "detail": "Balances oxygen ingress and CO2/ethylene release to slow ripening without inducing off-flavours."
+        },
+        {
+          "title": "Damage Protection",
+          "detail": "Adequate stiffness and impact resistance prevent crushing during stacking and distribution."
+        }
+      ],
+      "relevantProperties": [
+        {
+          "propertyKey": "tensileStrength",
+          "propertyName": "Tensile Strength",
+          "whyItMatters": "Supports protective rigid clamshell walls or tensioned lidding films without tearing."
+        },
+        {
+          "propertyKey": "wvtr",
+          "propertyName": "Water Vapour Transmission Rate (WVTR)",
+          "whyItMatters": "Governs moisture loss versus mould-promoting condensation inside berry punnets."
+        },
+        {
+          "propertyKey": "contactAngle",
+          "propertyName": "Water Contact Angle",
+          "whyItMatters": "Influences droplet beading vs. anti-fog sheeting behaviour on the inner lid surface."
+        }
+      ],
+      "candidateMaterials": [
+        {
+          "materialId": "pla",
+          "materialName": "PLA (Polylactic Acid)",
+          "roleContext": "Vented transparent clamshells and punnets for berries, grapes, and cherry tomatoes.",
+          "consideration": "Provides optical clarity and cold-chain rigidity; brittleness requires thoughtful corner/rib geometry."
+        },
+        {
+          "materialId": "chitosan",
+          "materialName": "Chitosan-based Films",
+          "roleContext": "Studied as thin edible dip/spray coatings directly on fresh-cut fruits and berries.",
+          "consideration": "Research highlights antimicrobial suppression of post-harvest fungi, though standalone films have high WVTR."
+        },
+        {
+          "materialId": "alginate",
+          "materialName": "Alginate-based Films",
+          "roleContext": "Ca2+-crosslinked edible coatings for fresh-cut fruit slices.",
+          "consideration": "Retains surface moisture on cut tissue; requires antimicrobial or anti-browning co-agents and external rigid packaging."
+        }
+      ],
+      "validationNote": "Must test post-harvest decay, anti-fog performance, and food-contact approval for any edible coating formulation."
+    },
+    {
+      "id": "meat-poultry",
+      "name": "Meat and Poultry",
+      "summary": "High-moisture, protein- and lipid-rich perishable foods demanding strict oxygen/moisture barriers, leak-proof containment, and food-contact safety.",
+      "keyRequirements": [
+        {
+          "title": "Oxygen & Moisture Barrier",
+          "detail": "Controls myoglobin oxidation, lipid rancidity, purge moisture loss, and aerobic bacterial growth."
+        },
+        {
+          "title": "Leak Resistance",
+          "detail": "Packaging must remain liquid-tight against meat exudate (drip) without swelling, delaminating, or losing seal integrity."
+        },
+        {
+          "title": "Food-Contact Safety",
+          "detail": "Strict compliance with overall and specific migration limits into aqueous and fatty food simulants under chilled storage."
+        }
+      ],
+      "relevantProperties": [
+        {
+          "propertyKey": "leachingMigration",
+          "propertyName": "Leaching / Migration",
+          "whyItMatters": "High water and fat contact can extract soluble plasticizers, monomers, or residual processing aids if the polymer is not food-contact certified."
+        },
+        {
+          "propertyKey": "wvtr",
+          "propertyName": "Water Vapour Transmission Rate (WVTR)",
+          "whyItMatters": "Low WVTR prevents surface drying and weight loss in chilled retail display cases."
+        },
+        {
+          "propertyKey": "humidityResponse",
+          "propertyName": "Humidity Response",
+          "whyItMatters": "Direct wet-tissue contact and ~90% RH chilled conditions rapidly weaken unblended hydrophilic polysaccharides."
+        }
+      ],
+      "candidateMaterials": [
+        {
+          "materialId": "pha",
+          "materialName": "PHA / PHB (Polyhydroxyalkanoates)",
+          "roleContext": "Moisture-resistant rigid trays or multilayer barrier layers.",
+          "consideration": "Stronger moisture barrier and wet stability than polysaccharide films; commercial barrier multilayer designs are still typically needed for long chilled shelf life."
+        },
+        {
+          "materialId": "pla",
+          "materialName": "PLA (Polylactic Acid)",
+          "roleContext": "Thermoformed meat trays paired with high-barrier lidding or absorbent pads.",
+          "consideration": "Monolayer PLA lacks sufficient O2/WVTR barrier for extended MAP meat shelf life unless coated (e.g., SiOx) or laminated."
+        },
+        {
+          "materialId": "chitosan",
+          "materialName": "Chitosan-based Films",
+          "roleContext": "Experimental antimicrobial active pads or composite inner layers.",
+          "consideration": "Studied for antimicrobial surface contact, not as a standalone liquid-tight barrier film."
+        }
+      ],
+      "validationNote": "Monolayer bioplastics rarely match conventional EVOH/PA/PE MAP meat barriers; multilayer barrier testing and microbiological challenge studies are mandatory."
+    },
+    {
+      "id": "bakery-products",
+      "name": "Bakery Products",
+      "summary": "Bread, pastries, and biscuits requiring balanced moisture control (preventing staling or crust softening), contamination protection, and appealing presentation.",
+      "keyRequirements": [
+        {
+          "title": "Moisture Control",
+          "detail": "Soft breads need moisture retention to delay staling, whereas crisp biscuits require low WVTR to prevent sogginess."
+        },
+        {
+          "title": "Contamination Protection",
+          "detail": "Physical barrier against dust, handling, airborne mould spores, and grease staining."
+        },
+        {
+          "title": "Suitable Shelf-Life & Visibility",
+          "detail": "Clean optical windows or overwraps with reliable closure or dead-fold performance."
+        }
+      ],
+      "relevantProperties": [
+        {
+          "propertyKey": "wvtr",
+          "propertyName": "Water Vapour Transmission Rate (WVTR)",
+          "whyItMatters": "Determines whether crisp baked goods absorb ambient humidity or soft loaves dry out prematurely."
+        },
+        {
+          "propertyKey": "transparency",
+          "propertyName": "Optical Transparency",
+          "whyItMatters": "High clarity windows and wraps showcase crust colour and artisanal texture."
+        },
+        {
+          "propertyKey": "tensileStrength",
+          "propertyName": "Tensile Strength",
+          "whyItMatters": "Prevents puncture from crusty loaves and supports high-speed flow-wrap or twist-wrap operations."
+        }
+      ],
+      "candidateMaterials": [
+        {
+          "materialId": "cellulose",
+          "materialName": "Cellulose-based Materials",
+          "roleContext": "Clear bakery carton windows, twist-wraps, and coated bread/biscuit pouches.",
+          "consideration": "Excellent dead-fold and clarity; coated moisture-barrier grades are essential for crisp biscuits or extended shelf life."
+        },
+        {
+          "materialId": "pla",
+          "materialName": "PLA (Polylactic Acid)",
+          "roleContext": "Transparent hinged bakery clamshells and window films for cooled pastries.",
+          "consideration": "Items must be cooled below ~45–50°C prior to packaging so amorphous PLA does not warp."
+        },
+        {
+          "materialId": "starch",
+          "materialName": "Starch-based Bioplastics",
+          "roleContext": "Short-shelf-life paper-laminated or TPS-blended dry bakery bags.",
+          "consideration": "Suitable primarily for short-term ambient takeaway baked goods where high moisture barrier is not required."
+        }
+      ],
+      "validationNote": "Match film WVTR specifically to water activity (aw) of the baked item—high-aw soft bread vs. low-aw crisp cookies have opposite barrier targets."
+    },
+    {
+      "id": "dry-foods",
+      "name": "Dry Foods",
+      "summary": "Grains, pulses, dry pasta, tea, coffee, spices, and powdered mixes needing strong moisture barrier against caking and prolonged storage stability.",
+      "keyRequirements": [
+        {
+          "title": "Moisture Barrier",
+          "detail": "Low WVTR is critical to prevent clumping, caking, loss of crispness, and mould growth during humid monsoon or warehouse storage."
+        },
+        {
+          "title": "Product Protection",
+          "detail": "Puncture resistance against sharp grains/pasta and reliable heat-seal strength."
+        },
+        {
+          "title": "Storage Stability",
+          "detail": "Dimensional and mechanical stability over months of ambient shelf storage without premature polymer embrittlement."
+        }
+      ],
+      "relevantProperties": [
+        {
+          "propertyKey": "wvtr",
+          "propertyName": "Water Vapour Transmission Rate (WVTR)",
+          "whyItMatters": "Primary determinant of moisture ingress rate into hygroscopic powders, cereals, and biscuits."
+        },
+        {
+          "propertyKey": "humidityResponse",
+          "propertyName": "Humidity Response",
+          "whyItMatters": "Warehouse humidity swings must not degrade the packaging film's tensile integrity or barrier performance."
+        },
+        {
+          "propertyKey": "tensileStrength",
+          "propertyName": "Tensile Strength",
+          "whyItMatters": "Resists tearing and puncture from heavy or sharp dry particulates (e.g., rice, pulses, pasta)."
+        }
+      ],
+      "candidateMaterials": [
+        {
+          "materialId": "pha",
+          "materialName": "PHA / PHB (Polyhydroxyalkanoates)",
+          "roleContext": "Moisture-barrier layers or rigid dry-food jars/closures.",
+          "consideration": "Exhibits lower WVTR and better humidity resistance than hydrophilic biopolymers; long-term PHB storage aging should be checked."
+        },
+        {
+          "materialId": "pla",
+          "materialName": "PLA (Polylactic Acid)",
+          "roleContext": "Short-to-medium shelf-life dry pouches (often metallized or SiOx-coated) and dry-goods jars.",
+          "consideration": "Uncoated thin PLA has moderate-to-high WVTR (~172 g/m²/day at 25 µm), so barrier coatings are commonly required for hygroscopic powders."
+        },
+        {
+          "materialId": "cellulose",
+          "materialName": "Cellulose-based Materials",
+          "roleContext": "Moisture-barrier-coated cellulose pouches for tea, coffee, and dry pasta.",
+          "consideration": "Only coated cellulose grades achieve low enough WVTR (10–30 g/m²/day) for moisture-sensitive dry foods."
+        }
+      ],
+      "validationNote": "Accelerated shelf-life moisture-gain testing (e.g., 38°C / 90% RH) is essential before replacing conventional metallized PP/PET laminates."
+    },
+    {
+      "id": "ready-to-eat",
+      "name": "Ready-to-Eat Foods",
+      "summary": "Prepared meals, salads, sandwiches, and hot-served takeaway items requiring reliable sealing, food-contact safety, and thermal resistance where hot-filled or reheated.",
+      "keyRequirements": [
+        {
+          "title": "Sealing Integrity",
+          "detail": "Consistent heat-sealing or snap-fit lid closure to prevent spills and cross-contamination in transit."
+        },
+        {
+          "title": "Food-Contact Safety",
+          "detail": "Low migration into complex aqueous, acidic, and oily meal components across chilled or warm holding temperatures."
+        },
+        {
+          "title": "Heat Resistance (Where Required)",
+          "detail": "Hot-filled soups, curries, or microwaveable meals require thermal stability above 80–100°C without warping or leaching."
+        }
+      ],
+      "relevantProperties": [
+        {
+          "propertyKey": "leachingMigration",
+          "propertyName": "Leaching / Migration",
+          "whyItMatters": "Elevated temperatures and oily/acidic sauces strongly accelerate migration of monomers or additives."
+        },
+        {
+          "propertyKey": "contactAngle",
+          "propertyName": "Water Contact Angle",
+          "whyItMatters": "Wettable surfaces absorb sauces and oils rapidly unless sufficiently hydrophobic or coated."
+        },
+        {
+          "propertyKey": "tensileStrength",
+          "propertyName": "Tensile Strength",
+          "whyItMatters": "Supports structural tray rigidity, stacking stability, and tear-resistant lidding."
+        }
+      ],
+      "candidateMaterials": [
+        {
+          "materialId": "pha",
+          "materialName": "PHA / PHB (Polyhydroxyalkanoates)",
+          "roleContext": "Thermoformed or injection-molded trays, cutlery, and heat-resistant lids.",
+          "consideration": "Higher melting temperatures (~145–175°C depending on copolymer) offer greater thermal headroom than unmodified amorphous PLA."
+        },
+        {
+          "materialId": "pla",
+          "materialName": "PLA (Polylactic Acid)",
+          "roleContext": "Chilled grab-and-go salad bowls, cold sandwich wedges, and cold deli containers.",
+          "consideration": "Standard amorphous PLA softens above ~55°C and is unsuitable for hot-fill meals unless crystallized (CPLA) or blended."
+        },
+        {
+          "materialId": "cellulose",
+          "materialName": "Cellulose-based Materials",
+          "roleContext": "Cold sandwich wraps or barrier-lined molded plant-fiber meal bowls.",
+          "consideration": "Pure cellulose does not melt, making molded cellulose pulp useful for hot meals when paired with a safe grease/water barrier."
+        }
+      ],
+      "validationNote": "Thermal distortion and high-temperature food-simulant migration testing must match exact serving and reheating conditions."
+    }
+  ]
+}

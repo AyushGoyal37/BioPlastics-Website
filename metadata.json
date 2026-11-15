@@ -1,0 +1,6 @@
+{
+  "name": "BioPlastics Explorer",
+  "description": "Web-based platform for bioplastics characterization, property comparison, and sustainable food-packaging application exploration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
